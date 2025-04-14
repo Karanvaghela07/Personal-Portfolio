@@ -399,7 +399,11 @@ article .icon {
   margin: 2rem auto;
   padding: 0.5rem;
   margin-left: -15px;
-
+}
+@media (max-width: 600px) {
+  .contact-info-upper-container {
+    margin-left: -15px;
+  }
 }
 
 .contact-info-container {
