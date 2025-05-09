@@ -20,3 +20,18 @@ toggle.addEventListener('change', () => {
   localStorage.setItem('theme', theme);
 });
 
+const text = "Karan Vaghela";
+  const element = document.getElementById("typewriter");
+  let index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 150);
+    } else {
+      element.classList.add("done"); // Remove blinking cursor
+    }
+  }
+
+  window.onload = typeWriter;
