@@ -681,16 +681,17 @@ body {
     transform: translateX(24px);
   }
 }
+/* Base Style (already included) */
 .name {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black; /* Typing cursor */
+  border-right: 2px solid black;
   width: fit-content;
   animation: blink 0.7s step-end infinite;
-  margin-left: 79px;
+  margin-left: 77px;
 }
 
 /* Blinking effect */
@@ -700,9 +701,27 @@ body {
   }
 }
 
-/* Stop blinking when typing is done */
+/* When typing is done */
 .name.done {
   border-right: none;
   animation: none;
+}
+
+/* Responsive Styles */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+    margin-left: 50px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
