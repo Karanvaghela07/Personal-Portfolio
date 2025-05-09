@@ -681,3 +681,28 @@ body {
     transform: translateX(24px);
   }
 }
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black; /* Typing cursor */
+  width: fit-content;
+  animation: blink 0.7s step-end infinite;
+  margin-left: 79px;
+}
+
+/* Blinking effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Stop blinking when typing is done */
+.name.done {
+  border-right: none;
+  animation: none;
+}
+
