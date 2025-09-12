@@ -742,3 +742,109 @@ body {
   
 }
 /* Logo inside hamburger nav */
+/* Landing Page */
+/* Landing Page Container */
+#landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 2.5s; /* stays for ~3s before fading */
+  background: var(--landing-bg);
+}
+
+/* Landing content */
+.landing-content {
+  text-align: center;
+  color: var(--landing-text);
+  animation: popUp 1s ease;
+}
+
+/* Signature logo */
+.signature-logo {
+  font-family: 'Great Vibes', cursive; /* Stylish signature font */
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(90deg, var(--landing-gradient-start), var(--landing-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite alternate;
+  cursor: default;
+}
+
+/* Tagline */
+.landing-tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: var(--landing-tagline);
+}
+
+/* Animations */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(255,255,255,0.2), 0 0 10px rgba(255,255,255,0.2);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255,255,255,0.5), 0 0 25px rgba(255,255,255,0.5);
+  }
+}
+
+/* Theme Variables */
+:root {
+  --landing-bg: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* light mode neutral */
+  --landing-text: #111;
+  --landing-gradient-start: #6c5ce7; /* professional gradient */
+  --landing-gradient-end: #00b894;
+  --landing-tagline: #555;
+}
+
+body.dark-mode {
+  --landing-bg: linear-gradient(135deg, #1f1f1f, #2c2c2c); /* dark mode neutral */
+  --landing-text: #fff;
+  --landing-gradient-start: #00b894;
+  --landing-gradient-end: #6c5ce7;
+  --landing-tagline: #ccc;
+}
+/* Default (Light mode) */
+.logo-text {
+  fill: #000; /* Black text */
+}
+.logo-path {
+  stroke: #000;
+  stroke-width: 2;
+  fill: transparent;
+}
+
+/* Dark mode */
+body.dark-mode .logo-text {
+  fill: #fff; /* White text in dark mode */
+}
+body.dark-mode .logo-path {
+  stroke: #fff;
+}
+
