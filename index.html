@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Landing Page -->
+    <div id="landing">
+  <div class="landing-content" style="max-width: 300px; margin: auto;">
+    <!-- Responsive Signature SVG Logo -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="100%" height="auto">
+      <path class="logo-path" d="M10 50 C 40 10, 80 10, 120 50 S 200 90, 250 50" />
+      <text class="logo-text" x="10" y="55" font-family="Pacifico, cursive" font-size="32">
+        Karan Vaghela
+      </text>
+    </svg>
+    <p class="landing-tagline">Fullstack Developer | Data Analyst</p>
+  </div>
+</div>
+
+
     <nav id="desktop-nav">
       <div class="logo"> < Karan Vaghela /> </div>
       <div>
@@ -19,6 +34,20 @@
           <li><a href="#contact">Contact</a></li> 
         </ul>
       </div>
+      <style>
+        /* Default Light Mode */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000; /* Black in light mode */
+}
+
+/* Dark Mode */
+body.dark-mode .logo {
+  color: #fff; /* White in dark mode */
+}
+
+      </style>
       
       <div class="theme-toggle-container">
         <label class="theme-switch" aria-label="Toggle dark mode">
@@ -59,6 +88,12 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+           <li>
+            <label class="theme-switch" aria-label="Toggle dark mode">
+              <input type="checkbox" id="theme-toggle-mobile"/>
+              <span class="slider"></span>
+            </label>
+          </li>
         </div>
       </div>
     </nav>
